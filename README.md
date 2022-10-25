@@ -1,8 +1,21 @@
-# Template Repo for ML Project
+# Flight Delay Prediction Pridiction
 
-This template repo will give you a good starting point for your second project. Besides the files used for creating a virtual environment, you will find a simple example of how to build a simple model in a python script. This is maybe the simplest way to do it. We train a simple model in the jupyter notebook, where we select only some features and do minimal cleaning. The output is then stored in simple python scripts.
+This challenge was designed specifically for the AI Tunisia Hack 2019, which takes place from 20 to 22 September. Welcome to the AI Tunisia Hack participants!
 
-The data used for this is: [coffee quality dataset](https://github.com/jldbc/coffee-quality-database).
+After AI Hack Tunisia, this competition will be re-opened as a Knowledge Challenge to allow others in the Zindi community to learn and test their skills.
+
+Flight delays not only irritate air passengers and disrupt their schedules but also cause :
+
+a decrease in efficiency
+an increase in capital costs, reallocation of flight crews and aircraft
+an additional crew expenses
+As a result, on an aggregate basis, an airline's record of flight delays may have a negative impact on passenger demand.
+
+This competition aims to predict the estimated duration of flight delays per flight
+
+This solution proposes to build a flight delay predictive model using Machine Learning techniques. The accurate prediction of flight delays will help all players in the air travel ecosystem to set up effective action plans to reduce the impact of the delays and avoid loss of time, capital and resources.
+
+from https://zindi.africa/competitions/ai-tunisia-hack-5-predictive-analytics-challenge-2
 
 ---
 ## Requirements and Environment
@@ -30,13 +43,13 @@ In order to train the model and store test data in the data folder and the model
 #activate env
 source .venv/bin/activate
 
-python example_files/train.py  
+python scripts/train_xgb.py data/Train.csv      
 ```
 
-In order to test that predict works on a test set you created run:
+In order to make predictions for a new dataset:
 
 ```bash
-python example_files/predict.py models/linear_regression_model.sav data/X_test.csv data/y_test.csv
+python scripts/predict_xgb.py data/Test.csv 
 ```
 
 ## Limitations
